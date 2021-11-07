@@ -1,9 +1,9 @@
 import random
+
 from environment import Environment
 
 
-class Agent():
-
+class Agent:
     def __init__(self, env):
         self.actions = env.actions
 
@@ -13,11 +13,7 @@ class Agent():
 
 def main():
     # Make grid environment.
-    grid = [
-        [0, 0, 0, 1],
-        [0, 9, 0, -1],
-        [0, 0, 0, 0]
-    ]
+    grid = [[0, 0, 0, 1], [0, 9, 0, -1], [0, 0, 0, 0]]
     env = Environment(grid)
     agent = Agent(env)
 

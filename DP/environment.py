@@ -1,9 +1,9 @@
 from enum import Enum
+
 import numpy as np
 
 
-class State():
-
+class State:
     def __init__(self, row=-1, column=-1):
         self.row = row
         self.column = column
@@ -28,8 +28,7 @@ class Action(Enum):
     RIGHT = -2
 
 
-class Environment():
-
+class Environment:
     def __init__(self, grid, move_prob=0.8):
         # grid is 2d-array. Its values are treated as an attribute.
         # Kinds of attribute is following.
@@ -60,8 +59,7 @@ class Environment():
 
     @property
     def actions(self):
-        return [Action.UP, Action.DOWN,
-                Action.LEFT, Action.RIGHT]
+        return [Action.UP, Action.DOWN, Action.LEFT, Action.RIGHT]
 
     @property
     def states(self):
